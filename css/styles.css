@@ -32,7 +32,7 @@ nav ul {
     text-align: center;
 }
 nav li {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-family: 'Francois One', sans-serif;
     font-size: 1.5em;
     border-top: 1px solid #fff;
 }
@@ -51,6 +51,7 @@ main {
     background-color: #fff;
     padding: 1.15%;
     font-size: 1.25em;
+    font-family: 'Roboto Slab', serif;
 }
 .action {
     font-size: 1.35em;
