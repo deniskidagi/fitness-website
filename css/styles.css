@@ -1,4 +1,7 @@
-nav, body, header, main, footer, div, img, h1, ul{
+* {
+    box-sizing: border-box;
+}
+nav, body, header, main, footer, div, img, h1, ul, figure, figcaption{
     margin: 0;
     padding: 0;
     border: 0;
@@ -11,7 +14,6 @@ img {
     display: block;
 }
 header {
-    position: sticky;
     top: 0;
     height: 100px;
     background-color: #000;
@@ -58,6 +60,26 @@ main {
     color: #666600;
     font-weight: bold;
 }
+.frame {
+    position: relative;
+    max-width: 450px;
+    margin: 2% auto;
+}
+.frame img{
+    object-fit: cover;
+}
+.pic-text {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
 .external{
     color: #666600;
     text-decoration: none;
@@ -89,6 +111,9 @@ footer p a {
     display: block;
     background-color: #fff;
 }
+.mobile h3 {
+    text-shadow: 5px 5px 8px #ccc;
+}
 .tablet-desktop {
     display: none;
 }
@@ -119,7 +144,6 @@ footer p a {
 /* media query for tablet viewport */
 @media screen and (min-width: 630px){
     header {
-        position: static;
         padding-bottom: 2%;
     }
     nav li {
@@ -142,6 +166,16 @@ footer p a {
     }
     .tablet-desktop {
         display: block;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 20px;
+    }
+    .pic-text {
+        font-size: 1em;
+        padding: 10px;
+
     }
     
     /* tablet viewport: style rules for main content area */
@@ -196,6 +230,17 @@ footer p a {
     }
     main h1 {
         font-size: 1.8em;
+    }
+    .pic-text{
+        font-size: 1.5em;
+        padding: 20px;
+    }
+    .frame {
+        opacity: 0.9;
+    }
+    .frame:hover {
+        opacity: 1;
+        box-shadow: 8px 8px 10px #808080;
     }
     #weights, #cardio, #training {
         width: 29%;
